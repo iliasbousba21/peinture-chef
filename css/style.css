@@ -1,4 +1,4 @@
-/* Peinture du Chef - Modern Sleek Redesign */
+/* Peinture & Chef - Modern Sleek Redesign */
 :root {
   --bg: #0c0c0c;
   --surface: #161616;
@@ -240,11 +240,18 @@ footer .contact-line a { color: var(--accent); }
 
 /* Gallery page */
 .gallery-header { padding: 140px 5vw 40px; text-align: center; }
+.gallery-category {
+  padding: 40px 5vw 20px;
+}
+.gallery-category .section-title {
+  margin-bottom: 1.2rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 8px;
-  padding: 0 5vw 80px;
+  padding: 0 0 20px;
 }
 .gallery-grid img {
   width: 100%;
@@ -316,4 +323,5 @@ footer .contact-line a { color: var(--accent); }
 @media (max-width: 600px) {
   .featured-grid { grid-template-columns: 1fr; }
   section { padding: 70px 5vw; }
+  .gallery-category { padding: 30px 5vw 10px; }
 }
