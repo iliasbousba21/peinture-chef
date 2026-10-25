@@ -271,3 +271,27 @@ body.pc-home .pc-nav.is-scrolled .navigation-wrap { padding-top: 14px; padding-b
 
 .pc-nowrap { white-space: nowrap; }
 @media (max-width: 767px) { .pc-hide-sm { display: none; } .pc-hero__title { margin-top: 18px; } .pc-hero__lead { margin-top: 24px; } }
+
+/* ---------- Home naast het logo ---------- */
+.pc-brand { display: flex; align-items: center; gap: 18px; flex: none; }
+.pc-brand__sep { width: 1px; height: 22px; background: rgba(236, 235, 231, .28); }
+.pc-home a.pc-homelink {
+  position: relative; display: inline-block; padding: 10px 0;
+  font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .26em; text-transform: uppercase;
+  text-decoration: none; color: var(--fg); opacity: .85;
+  transition: opacity .3s ease, color .3s ease;
+}
+.pc-home a.pc-homelink::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 1px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease);
+}
+.pc-home a.pc-homelink:hover { opacity: 1; color: #fff; }
+.pc-home a.pc-homelink:hover::after,
+.pc-home a.pc-homelink.is-current::after { transform: scaleX(1); }
+.pc-home a.pc-homelink.is-current { opacity: 1; color: #fff; }
+.pc-home a.pc-homelink:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 991px) {
+  .pc-brand { gap: 14px; }
+  .pc-brand__sep { height: 18px; }
+  .pc-home a.pc-homelink { font-size: 11px; letter-spacing: .24em; }
+}
