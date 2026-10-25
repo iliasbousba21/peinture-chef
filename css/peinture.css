@@ -243,3 +243,24 @@ body .heading-jumbo-small + .container > .divider:first-child { margin-top: 48px
   body .details-wrap { margin-bottom: 20px; }
   body .div-block-2 .paragraph-light { font-size: 14px; line-height: 1.6; }
 }
+
+/* =========================================================
+   Galerij: één strakke kolom, alle foto's en tekst even breed
+   ========================================================= */
+@media (min-width: 768px) {
+  body .gallery-scroll { padding: 0 24px 60px; }
+  body .gallery-scroll > *,
+  body .gallery-scroll section,
+  body .gallery-scroll section > * {
+    width: 100%; max-width: 720px; margin-left: auto; margin-right: auto;
+  }
+  body .gallery-scroll section { padding-left: 0; padding-right: 0; }
+  body .gallery-scroll img {
+    display: block; width: 100%; max-width: 720px; height: auto;
+    margin: 0 auto 12px; padding: 0; border-radius: 2px;
+  }
+  body .gallery-scroll .image-49 { margin-top: 24px; }
+  body .gallery-scroll h1 { margin-top: 64px; margin-bottom: 20px; padding: 0; text-align: center; }
+  body .gallery-scroll .heading-2 { margin-top: 48px; }
+  body .gallery-scroll p { margin-bottom: 28px; padding: 0; text-align: center; }
+}
