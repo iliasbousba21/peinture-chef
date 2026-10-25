@@ -276,3 +276,26 @@ body .gallery-scroll .image-49 { height: auto; aspect-ratio: 1027 / 670; object-
   }
   body .section-heading { max-width: 280px; margin-left: auto; margin-right: auto; font-size: 24px; }
 }
+
+/* =========================================================
+   Banner bovenaan: op elke pagina exact dezelfde maat en plek
+   ========================================================= */
+body .intro-header.pc-banner,
+body .intro-header.cc-subpage.pc-banner {
+  display: block; flex: none; align-self: auto;
+  width: calc(100% - 40px); max-width: 1080px; min-width: 0;
+  height: auto; min-height: 0; max-height: none; aspect-ratio: 1080 / 580;
+  margin: 20px auto 0; padding: 0; transform: none; position: relative; left: 0; top: 0;
+  background-color: #2f343e;
+  background-image: url('../images/Schermafbeelding-2025-08-06-221128.png');
+  background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;
+  border-radius: 2px;
+}
+body .section:has(> .pc-banner) { display: block; width: 100%; margin: 0; padding: 0; }
+body .gallery-scroll > .container-2:first-child + .heading-2 { margin-top: 48px; }
+@media (max-width: 767px) {
+  body .intro-header.pc-banner, body .intro-header.cc-subpage.pc-banner { margin-top: 16px; }
+  body .gallery-scroll > .container-2:first-child + .heading-2 { margin-top: 36px; }
+}
+
+body .gallery-scroll .paragraph-13 { line-height: 1.35; }
