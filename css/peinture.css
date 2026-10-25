@@ -133,3 +133,113 @@ html.pc-lock, html.pc-lock body { overflow: hidden; }
   body, .pc-js .pc-reveal, .pc-zoomable, .pc-lb, .pc-lb__img { animation: none !important; transition: none !important; }
   .pc-js .pc-reveal { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   Navigatie: logo links, menu rechts (alle schermen)
+   ========================================================= */
+body .navigation.pc-nav {
+  position: sticky; top: 0; z-index: 100;
+  display: block; width: 100%; min-width: 0; max-width: none;
+  height: auto; min-height: 0; max-height: none;
+  margin: 0; padding: 0; transform: none;
+  background: rgba(255, 255, 255, .94);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid rgba(20, 23, 29, .06);
+}
+body .pc-nav .navigation-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; min-width: 0; max-width: 1180px;
+  height: auto; min-height: 0; max-height: none;
+  margin: 0 auto; padding: 16px 40px; background: transparent;
+}
+.pc-logo { display: block; flex: none; line-height: 0; transition: opacity .3s ease, transform .4s var(--pc-ease); }
+.pc-logo:hover { opacity: .85; transform: scale(.97); }
+.pc-logo img { display: block; width: 52px; height: 52px; object-fit: cover; }
+body .pc-nav .menu { position: static; inset: auto; margin: 0; display: flex; align-items: center; z-index: auto; }
+
+@media (min-width: 992px) {
+  body .pc-nav .navigation-items { display: flex; align-items: center; margin: 0; padding: 0; background: transparent; }
+  body .pc-nav .navigation-item,
+  body .pc-nav .navigation-item.w--current { margin: 0 0 0 40px; padding: 10px 0; }
+}
+
+@media (max-width: 991px) {
+  body .pc-nav .navigation-wrap { padding: 12px 20px; }
+  .pc-logo img { width: 44px; height: 44px; }
+  body .pc-nav .menu-button {
+    display: flex !important; align-items: center; justify-content: center;
+    width: 44px; height: 44px; margin: 0 -10px 0 0; padding: 0; background: transparent;
+  }
+  body .pc-nav .menu-button.w--open { background: transparent; }
+  body .pc-nav .menu-icon { width: 22px; }
+  body .pc-nav .w-nav-menu[data-nav-menu-open] {
+    background: #fff; padding: 6px 0 10px;
+    border-bottom: 1px solid rgba(20, 23, 29, .08);
+    box-shadow: 0 18px 30px -24px rgba(20, 23, 29, .45);
+  }
+  body .pc-nav .w-nav-menu[data-nav-menu-open] .navigation-item {
+    display: block; margin: 0; padding: 16px 20px; text-align: center;
+    background-image: none; font-size: 13px; letter-spacing: .14em;
+  }
+}
+
+/* Spreuk op de startpagina: overlapte de lijn eronder */
+body .heading-jumbo-small { width: auto; max-width: 800px; margin: 44px auto 0; padding: 0 20px; }
+body .heading-jumbo-small + .container > .divider:first-child { margin-top: 48px; }
+
+/* =========================================================
+   Gsm-weergave: één nette kolom, vaste marges, rustige tekst
+   ========================================================= */
+@media (max-width: 767px) {
+  body { overflow-x: hidden; }
+
+  /* Banner met logo */
+  body .intro-header,
+  body .intro-header.cc-subpage { width: auto; height: 170px; margin: 16px 20px 0; background-size: cover; background-position: 50%; }
+
+  /* Startpagina */
+  body .heading-jumbo-small {
+    width: auto; margin: 28px 20px 0; padding: 0;
+    font-size: 19px; line-height: 1.45; letter-spacing: .04em; text-align: center;
+  }
+  body .divider { margin-top: 28px; }
+  body .home-content-wrap { margin: 36px 0 48px; }
+  body .about-grid { grid-row-gap: 28px; margin-bottom: 0; }
+  body .about-grid > img { width: calc(100% - 40px); height: auto; margin: 0 20px; }
+  body .home-section-wrap { margin: 0; padding: 0 20px; text-align: center; }
+  body .home-section-wrap .label { margin-bottom: 8px; font-size: 12px; letter-spacing: .2em; }
+  body .section-heading { margin-bottom: 18px; font-size: 26px; line-height: 1.25; }
+  body .home-section-wrap p { font-size: 15px; line-height: 28px; margin-bottom: 0; }
+
+  /* Galerij */
+  body .gallery-scroll { padding: 0 20px 40px; }
+  body .gallery-scroll > *,
+  body .gallery-scroll section,
+  body .gallery-scroll section > * { width: 100%; max-width: 100%; margin-left: 0; margin-right: 0; }
+  body .gallery-scroll section { padding: 0; }
+  body .gallery-scroll img {
+    display: block; width: 100%; max-width: 100%; height: auto;
+    margin: 0 0 10px; padding: 0; border-radius: 2px;
+  }
+  body .gallery-scroll .image-49 { margin: 16px 0 0; }
+  body .gallery-scroll h1 {
+    margin: 44px 0 16px; padding: 0;
+    font-size: 22px; line-height: 1.3; letter-spacing: .08em; text-align: center;
+  }
+  body .gallery-scroll p {
+    margin: 0 0 24px; padding: 0;
+    font-size: 15px; line-height: 1.7; text-align: center;
+  }
+  body .gallery-scroll .paragraph-13 { margin-bottom: 14px; font-size: 18px; line-height: 1.4; }
+  body .gallery-scroll .heading-2 { margin-top: 36px; }
+
+  /* Contact */
+  body .section > .container { padding-top: 0; padding-left: 0; padding-right: 0; }
+  body .contact-form-grid { grid-row-gap: 32px; margin: 28px 0 0; }
+  body .contact-form-wrap { margin: 0 20px; padding: 26px 22px; }
+  body .contact-form-heading-wrap { margin-bottom: 20px; }
+  body .contact-heading { font-size: 24px; line-height: 1.25; letter-spacing: .06em; text-align: left; }
+  body .div-block-2 { padding: 0 20px 48px; }
+  body .details-wrap { margin-bottom: 20px; }
+  body .div-block-2 .paragraph-light { font-size: 14px; line-height: 1.6; }
+}
