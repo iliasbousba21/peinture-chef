@@ -7,7 +7,7 @@
 
   /* ---------- Klikbare foto's ---------- */
   var photos = Array.prototype.slice.call(
-    document.querySelectorAll('.gallery-scroll img:not(.image-49), .about-grid img, .pc-work img')
+    document.querySelectorAll('.gallery-scroll img:not(.image-49), .about-grid img, .pc-work img, .pc-shot img')
   );
 
   // Kies de scherpste versie die nog licht genoeg is (max. ~2000px breed)
