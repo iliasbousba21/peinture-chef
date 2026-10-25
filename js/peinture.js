@@ -7,7 +7,7 @@
 
   /* ---------- Klikbare foto's ---------- */
   var photos = Array.prototype.slice.call(
-    document.querySelectorAll('.gallery-scroll img:not(.image-49), .about-grid img')
+    document.querySelectorAll('.gallery-scroll img:not(.image-49), .about-grid img, .pc-work img')
   );
 
   // Kies de scherpste versie die nog licht genoeg is (max. ~2000px breed)
@@ -140,7 +140,7 @@
     var targets = document.querySelectorAll([
       '.heading-jumbo-small', '.home-section-wrap > *', '.about-grid > img',
       '.gallery-scroll h1', '.gallery-scroll p', '.gallery-scroll img',
-      '.contact-form-wrap', '.div-block-2 .details-wrap', '.intro-header'
+      '.contact-form-wrap', '.div-block-2 .details-wrap', '.intro-header', '[data-reveal]'
     ].join(','));
 
     doc.classList.add('pc-js');
